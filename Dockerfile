@@ -7,7 +7,7 @@
 # CMD ["fastapi", "run", "app/main.py", "--port", "80"]
 
 FROM python:3.12-slim
-WORKDIR /
+WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt
-CMD ["python", "app/main.py"]
+CMD ["python", "main.py"]
