@@ -1,0 +1,17 @@
+cluster_name: 'Appeal'
+seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+      - seeds: "10.16.0.1,10.16.0.2"
+listen_address: 10.16.0.1
+rpc_address: 10.16.0.1
+endpoint_snitch: GossipingPropertyFileSnitch
+
+cluster_name: 'Appeal'
+seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+      - seeds: "10.16.0.1,10.16.0.2"
+listen_address: 10.16.0.2
+rpc_address: 10.16.0.2
+endpoint_snitch: GossipingPropertyFileSnitch
