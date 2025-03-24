@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Response, Request, HTTPException
 from app.appeal.config.Config import ConnCassandra
-from app.appeal.Created import Created
+# from app.appeal.Created import Created
 import os
 
 from app.protected.config.init_sql import initialize_tables, add_test_data
@@ -83,10 +83,10 @@ async def get_data():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-@app.get("/appeals/created")
-async def created_data(request: Request, response: Response):
-    data = await Created.created(request)
-    return data
+# @app.get("/appeals/created")
+# async def created_data(request: Request, response: Response):
+#     data = await Created.created(request)
+#     return data
 
 
 

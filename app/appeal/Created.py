@@ -1,13 +1,13 @@
-from fastapi import Request, HTTPException
-import httpx
+# from fastapi import Request, HTTPException
+# import httpx
 
 
 
-class Created:
+# class Created:
 
 
-    @staticmethod
-    async def created(request: Request):
+#     @staticmethod
+#     async def created(request: Request):
 
         # Получаем JWT из cookies
         
