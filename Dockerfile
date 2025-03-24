@@ -1,7 +1,13 @@
+# FROM python:3.12-slim
+# WORKDIR /code
+# COPY ./requirements.txt /code/requirements.txt
+# COPY ./.env /code/.env
+# RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+# COPY ./app /code/app
+# CMD ["fastapi", "run", "app/main.py", "--port", "80"]
+
 FROM python:3.12-slim
-WORKDIR /code
-COPY ./requirements.txt /code/requirements.txt
-COPY ./.env /code/.env
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-COPY ./app /code/app
-CMD ["fastapi", "run", "app/main.py", "--port", "80"]
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt
+CMD ["python", "app/main.py"]
