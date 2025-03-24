@@ -20,7 +20,7 @@ class InitializeCs:
             # Создаем keyspace и таблицу
             conn.execute(f"""
                 CREATE KEYSPACE IF NOT EXISTS {"appeal"}
-                WITH replication = {{'class': 'SimpleStrategy', 'replication_factor': 2}};
+                WITH replication = {{'class': 'NetworkTopologyStrategy', 'replication_factor': 2}};
             """)
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS appeals (
